@@ -136,7 +136,6 @@ export default {
 
 <style scoped lang="less">
 @import "../style/color";
-
 .container {
   position: absolute;
   top: 0px;
@@ -145,7 +144,7 @@ export default {
   .header {
     height: 60px;
     line-height: 60px;
-    background: @color-primary;
+    background: @color-blue2;
     color: #fff;
     .userinfo {
       text-align: right;
@@ -164,7 +163,7 @@ export default {
       }
     }
     .logo {
-      //width:230px;
+      //width:180px;
       height: 60px;
       font-size: 22px;
       padding-left: 20px;
@@ -182,10 +181,12 @@ export default {
       }
     }
     .logo-width {
-      width: 230px;
+      width: 180px;
+      background-color: @color-blue1;
     }
     .logo-collapse-width {
       width: 60px;
+      background-color: @color-blue1;
     }
     .tools {
       padding: 0px 23px;
@@ -202,10 +203,13 @@ export default {
     bottom: 0px;
     overflow: hidden;
     aside {
-      flex: 0 0 230px;
-      width: 230px;
+      flex: 0 0 180px;
+      width: 180px;
       .el-menu {
         height: 100%;
+      }
+      .el-submenu .el-menu-item{
+        min-width: 180px;
       }
       .collapsed {
         width: 60px;
@@ -227,8 +231,8 @@ export default {
       width: 60px;
     }
     .menu-expanded {
-      flex: 0 0 230px;
-      width: 230px;
+      flex: 0 0 180px;
+      width: 180px;
     }
     .content-container {
       flex: 1;
@@ -236,7 +240,7 @@ export default {
       padding: 20px;
       .breadcrumb-container {
         .title {
-          width: 200px;
+          width: 180px;
           float: left;
           color: #475669;
         }
