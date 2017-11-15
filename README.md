@@ -1,7 +1,9 @@
 # vue-webpack-boilerplate
 
 > A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
+
 > 该框架基因vue-cli的webpack模版
+
 > 框架技术：vue2.0+elementui2.0+vuex3.0+axios0.17+less
 
 ## Documentation
