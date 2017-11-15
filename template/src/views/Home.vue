@@ -47,13 +47,13 @@
             </template>
             <template v-else>
               <li class="el-submenu">
-                <div class="el-submenu__title el-menu-item" style="padding-left: 20px;height: 56px;line-height: 56px;padding: 0 20px;" :class="$route.path==item.children[0].path?'is-active':''" @click="$router.push(item.children[0].path)"><i :class="item.iconCls"></i></div>
+                <div class="el-submenu__title" style="padding-left: 20px;height: 56px;line-height: 56px;padding: 0 20px;" :class="$route.path==item.children[0].path?'is-active':''" @click="$router.push(item.children[0].path)"><i :class="item.iconCls"></i></div>
               </li>
             </template>
           </li>
         </ul>
       </aside>
-      <section class="content-container">
+      <section class="content-container" v-loading="loading">
         <div class="grid-content bg-purple-light">
           <el-col :span="24" class="breadcrumb-container">
             <strong class="title" v-text="$route.name"></strong>
@@ -92,6 +92,11 @@ export default {
         resource: '',
         desc: ''
       }
+    }
+  },
+  computed: {
+    loading () {
+      return this.$store.state.loading
     }
   },
   methods: {
@@ -192,7 +197,6 @@ export default {
   }
   .main {
     display: flex;
-    // background: #324057;
     position: absolute;
     top: 60px;
     bottom: 0px;
@@ -200,9 +204,6 @@ export default {
     aside {
       flex: 0 0 230px;
       width: 230px;
-      // position: absolute;
-      // top: 0px;
-      // bottom: 0px;
       .el-menu {
         height: 100%;
       }
@@ -230,17 +231,10 @@ export default {
       width: 230px;
     }
     .content-container {
-      // background: #f1f2f7;
       flex: 1;
-      // position: absolute;
-      // right: 0px;
-      // top: 0px;
-      // bottom: 0px;
-      // left: 230px;
       overflow-y: scroll;
       padding: 20px;
       .breadcrumb-container {
-        //margin-bottom: 15px;
         .title {
           width: 200px;
           float: left;

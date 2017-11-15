@@ -27,6 +27,7 @@
     "axios": "^0.17.1",
     "element-ui": "^2.0.4",
     "vue": "^2.5.2"{{#router}},
+    "vuex": "^3.0.1",
     "vue-router": "^3.0.1"{{/router}}
   },
   "devDependencies": {

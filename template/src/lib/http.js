@@ -1,4 +1,6 @@
 import axios from 'axios'
+import store from '../store'
+
 // import { Indicator } from 'mint-ui'
 const baseConfig = require('../../config')
 // axios 通用配置
@@ -27,6 +29,8 @@ const lockHttp = axios.create(config)
 // 添加请求，显示loading
 const pushRequest = config => {
   _requests.push(config)
+  console.log(store)
+  store.dispatch('changeLoading', true)
   // Indicator.open()
 }
 // 移除请求，无请求时关闭loading
@@ -38,6 +42,7 @@ const popRequest = config => {
     _requests.splice(_index, 1)
   }
   if (!_requests.length) {
+    store.dispatch('changeLoading', false)
     // Indicator.close()
   }
 }

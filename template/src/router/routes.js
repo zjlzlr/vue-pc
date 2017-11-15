@@ -7,7 +7,7 @@ import Page6 from '@/views/nav3/Page6.vue'
 
 let router = [
   {
-    path: '/base',
+    path: '/',
     component: Home,
     name: '导航一',
     iconCls: 'el-icon-message', // 图标样式class
@@ -18,7 +18,7 @@ let router = [
     ]
   },
   {
-    path: '/base',
+    path: '/',
     component: Home,
     name: '',
     iconCls: 'el-icon-setting',
