@@ -1,8 +1,8 @@
 # vue-webpack-boilerplate
 
 > A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
-
-> This template is Vue 2.0 compatible. For Vue 1.x use this command: `vue init webpack#1.0 my-project`
+> 该框架基因vue-cli的webpack模版
+> 框架技术：vue2.0+elementui2.0+vuex3.0+axios0.17+less
 
 ## Documentation
 
@@ -15,7 +15,7 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 
 ``` bash
 $ npm install -g vue-cli
-$ vue init webpack my-project
+$ vue init zjlzlr/vue-pc my-project 注：eslint需选择standard
 $ cd my-project
 $ npm install
 $ npm run dev
